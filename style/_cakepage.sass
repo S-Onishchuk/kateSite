@@ -1,0 +1,138 @@
+//1. cakepage
+// 2. btns
+// 3. media
+    
+//1. cakepage
+.cakepage
+    padding-top: 70px
+    width: 55%
+    margin: 0 auto
+    text-align: center
+
+    .view__icon 
+        display: flex
+        color: $yellow
+        font-size: 18px
+
+    &__img
+        display: block
+        width: 100%
+        height: auto
+        max-height: 60vh
+
+        border: 3px solid $yellow
+        border-radius: 5px
+
+.catepage__item
+    padding-top: 20px
+    display: grid
+    grid-template-columns: 35% 65%
+
+    .cp__describe
+        text-align: right
+        padding-right: 15px
+        margin-right: 15px
+
+        border-right: 2px solid $yellow
+
+        .cp__price
+            font-family: $secondFont
+            padding-top: 10px
+            color: $hoverColor
+            font-size: 24px
+
+    .cp__text
+        text-align: left
+        font-size: 24px
+
+.for_btn
+    position: relative
+    
+// 2. btns
+.next,
+.prev
+    position: absolute
+    top: 50%
+    transform: translate3d(0, -50%, 0)
+
+    width: 20px
+    height: 20px
+    opacity: 0.7
+
+    border: none
+    background: none
+    border-top: 3px solid $yellow
+    border-right: 3px solid $yellow
+    cursor: pointer
+
+    transition: opacity .2 linear
+
+    &:hover
+        opacity: 1
+
+.prev
+    left: -40px
+    transform: rotate(-135deg)
+
+.next
+    right: -40px
+    transform: rotate(45deg)
+
+// media
+// 1399px - 993px
+@media (max-width: 1400px)
+    .catepage__item
+        padding-top: 10px
+
+        .cp__describe
+            padding-right: 10px
+            margin-right: 10px
+
+            .cp__title,
+            .cp__price
+                font-size: 20px
+            .cp__price
+                padding-top: 5px
+
+
+// 992px - 770px
+@media (max-width: 992px)
+    .section--cakepage
+        padding-bottom: 15px
+    .cakepage
+        width: 65%   
+
+    .catepage__item
+        .cp__describe,
+        .cp__text
+            font-size: 16px
+
+// 769px-576px
+@media (max-width: 769px)
+    .cakepage
+        width: 100%  
+    
+    // btns
+    .next,
+    .prev
+        opacity: 1
+
+    .next
+        right: 20px
+    .prev
+        left: 20px
+
+// 575px-320px
+@media (max-width: 575px)
+    .catepage__item
+        grid-template-columns: 1fr
+
+        .cp__describe
+            text-align: center
+            padding: 0 0 10px 0
+            margin: 0 0 10px 0
+            border: none
+            border-bottom: 2px solid $yellow
+        
+        .cp__text
+            text-align: center

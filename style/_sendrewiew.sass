@@ -1,0 +1,81 @@
+//1. sendrewiew
+//2. media
+
+
+//1. sendrewiew
+.sentReview
+    padding-top: 100px
+    width: 55%
+    margin: 0 auto
+    text-align: center
+
+    &__title
+        font-size: 42px
+        padding-bottom: 20px
+
+.sentReview__flex
+    display: flex
+    justify-content: space-between
+
+    & .sr__input
+        width: 49%
+
+.sr__textarea
+    width: 100%
+    margin: 20px 0
+    resize: none
+
+.sr__input,
+.sr__textarea
+    padding: 10px
+    font-size: 20px
+    border-radius: 15px
+    border: 1px solid $mainColor
+
+#sr__file
+    display: none
+
+
+// 1399px - 993px
+@media (max-width: 1400px)
+    .sentReview
+        padding-top: 70px
+        width: 70%
+
+        &__title
+            font-size: 32px
+
+// 992px - 770px
+@media (max-width: 992px)
+    .sentReview
+        width: 100%
+        padding-bottom: 10px
+
+    .sr__textarea
+        margin: 10px 0
+
+// 769px-576px
+@media (max-width: 769px)
+    .sentReview
+        &__title
+            font-size: 24px
+            padding-bottom: 10px
+
+    .sr__input,
+    .sr__textarea
+        padding: 5px 10px
+        font-size: 16px
+        border-radius: 15px
+
+
+// 575px-320px
+@media (max-width: 575px)
+    .sentReview__flex--input
+        flex-direction: column
+
+        & .sr__input
+            width: 100%
+            margin-bottom: 10px
+
+            &:last-child
+                margin: 0
